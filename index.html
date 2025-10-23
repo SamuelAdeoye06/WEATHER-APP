@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="weatherapp.css" />
+  </head>
+  <body>
+    <!-- RAPID API -->
+    <!-- <div id="myScreen">
+        <p id="loader">Loading...</p>  
+    </div>    -->
+
+    <!-- <div class="container col-md-4 border my-4 p-3">
+        <select name="" id="myScreen" class="form-control mb-2" onchange="getState(this.value)">
+            <option value="" onclick="clearState()">Select Country</option>
+        </select>
+        <select name="" id="myScreen2"class="form-control mb-2" onchange="displayWeather(this.value)">
+            <option value="">Select State</option>
+        </select>
+        <div id="weatherScreen"></div>
+    </div> -->
+
+    <!-- <h1 class="app-title">🌤 Smart Weather App</h1>
+    <p class="app-desc">
+      Select your <strong>country</strong>, then choose your
+      <strong>state</strong>
+      to instantly view your current weather forecast.
+    </p> -->
+
+    <h1 class="app-title">🌦️ Smart Weather App</h1>
+    <p class="app-desc">
+      Explore real-time weather conditions around the world. Choose a
+      <strong>country</strong>, select a <strong>state</strong>, and view
+      detailed <strong>city forecasts</strong> instantly.
+    </p>
+    <div class="container-box">
+      <select
+        id="myScreen"
+        class="form-control mb-2"
+        onchange="getState(this.value)"
+      >
+        <option value="">Select Country</option>
+      </select>
+      <select
+        id="myScreen2"
+        class="form-control mb-2"
+        onchange="getCity(myScreen.value, this.value)"
+        style="display: none"
+      >
+        <option value="">Select State</option>
+      </select>
+      <select
+        id="myScreen3"
+        class="form-control mb-2"
+        onchange="displayWeather(this.value)"
+        style="display: none"
+      >
+        <option value="">Select City</option>
+      </select>
+
+      <div id="weatherScreen"></div>
+    </div>
+
+    <footer>Crafted with ☁️ by SmartWeather | Powered by RapidAPI & OpenWeather</footer>
+
+    <script src="weatherapp.js"></script>
+  </body>
+</html>

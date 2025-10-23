@@ -1,0 +1,267 @@
+/* #myScreen2{
+    display: none;
+}
+.weather-card {
+    background: linear-gradient(145deg, #e0f7fa, #ffffff);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.weather-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.weather-card h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #00796b;
+}
+
+.weather-card h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #212121;
+    margin: 10px 0;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.condition {
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: #555;
+}
+
+.feels-like {
+    font-size: 0.95rem;
+    color: #757575;
+}
+.weather-card hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+  
+.weather-card p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+  
+.weather-card strong {
+    color: #00796b;
+} */
+
+/* === GENERAL === */
+body {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  font-family: "Poppins", sans-serif;
+  color: #1b1b1b;
+  padding: 20px;
+}
+
+/* === HEADER === */
+h1.app-title {
+  color: #fff;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+p.app-desc {
+  color: #f0f0f0;
+  font-size: 1.05rem;
+  margin-bottom: 35px;
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* === CONTAINER === */
+.container-box {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.container-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* === SELECT DROPDOWNS === */
+select {
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #d1d1d1;
+  padding: 12px;
+  margin-bottom: 15px;
+  transition: all 0.2s ease;
+  background: #fff;
+  color: #333;
+}
+
+select:focus {
+  border-color: #4facfe;
+  outline: none;
+  box-shadow: 0 0 8px rgba(79, 172, 254, 0.4);
+}
+
+/* === WEATHER CARD (Restyled) === */
+.weather-card {
+  background: linear-gradient(145deg, #e0f7fa, #ffffff);
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 30px 25px;
+  margin-top: 25px;
+  color: #222;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.35s ease;
+}
+
+.weather-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Weather Icon */
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+/* Floating effect */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* City Name */
+.weather-card h2 {
+  color: #0077b6;
+  font-size: 1.5rem;
+  margin-top: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Temperature */
+.weather-card h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111;
+  margin: 12px 0;
+}
+
+/* Condition text */
+.condition {
+  font-size: 1.15rem;
+  text-transform: capitalize;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Feels-like */
+.feels-like {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Divider */
+.weather-card hr {
+  margin: 18px 0;
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Details text */
+.weather-card strong {
+  color: #0077b6;
+}
+
+.weather-card p {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+
+/* === FOOTER === */
+footer {
+  margin-top: 45px;
+  color: #f5f5f5;
+  font-size: 0.9rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  h1.app-title {
+    font-size: 1.8rem;
+  }
+
+  p.app-desc {
+    font-size: 0.95rem;
+  }
+
+  .container-box {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .weather-card h1 {
+    font-size: 2.4rem;
+  }
+
+  .weather-icon {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-card {
+    padding: 18px;
+  }
+
+  select {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  h1.app-title {
+    font-size: 1.6rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
