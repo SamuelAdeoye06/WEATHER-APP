@@ -114,7 +114,7 @@
             const [lat, lon] = latLog.split(',');
             console.log('Latitude:', lat, 'Longitude:', lon);
 
-            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=faa3b74d58700a19f63c3a500cf3799c`)
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=faa3b74d58700a19f63c3a500cf3799c`)
             .then(response => response.json())
             .then(weather => {
                 const city = weather.name;
@@ -163,3 +163,9 @@
             .catch(error => console.error('Error:', error));
         }
         // displayWeather()
+
+        const clearWeather = () => {
+            weatherScreen.innerHTML = "";
+        }
+
+        
